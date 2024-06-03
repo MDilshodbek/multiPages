@@ -6,6 +6,8 @@ import Services from "./pages/Services/services";
 import Contact from "./pages/Contact/contact";
 import { Routes, Route } from "react-router-dom";
 import Phone_Number from "./pages/Contact/Phone_Number/phoneNumber";
+import Blogs from "./pages/blogs/blogs";
+import BlogDetails from "./pages/blogs/blog_Details/blogDetails";
 
 function App() {
   // const path = window.location.pathname;
@@ -23,6 +25,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />}>
           <Route path="phoneNumber" element={<Phone_Number />} />
+        </Route>
+        <Route path="/blogs" element={<Blogs />}>
+          <Route path=":blogId" element={<BlogDetails />} />
         </Route>
       </Routes>
     </div>
